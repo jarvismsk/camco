@@ -1,10 +1,10 @@
 import React from 'react';
-import AddressDetails from './components/AddressDetails';
+import Header from './components/Header'
 
 const App = () => {
   return (
     <div>
-      <AddressDetails />
+      <Header />
     </div>
   );
 };

@@ -1,6 +1,29 @@
 import React from "react";
+import Header from '../Header';
+import CanonModels from "../CanonModels";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import NikonModels from "../NikonModels";
+import SonyModels from "../SonyModels";
 
-const all3 = () => {
+
+const All3 = () => {
+  return (
+    <Router>
+      <div>
+        <Header renderContent={true}/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/canon/models" component={CanonModels} />
+          <Route path="/nikon/models" component={NikonModels} />
+          <Route path="/sony/models" component={SonyModels} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+const Home = () => {
   return (
     <div>
       <BrandSelect />
@@ -9,14 +32,11 @@ const all3 = () => {
   );
 };
 
-// ADD BORDER RADIUS TO ALL THE BOXES
-
-
 const BrandSelect = () => {
   return (
     <div className="bg-white border-4 border-blue-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">
           <span>Sell your Camera </span>
           <img
             src="/icamera.svg"
@@ -28,28 +48,31 @@ const BrandSelect = () => {
         <div className="flex justify-center">
           <div className="flex flex-wrap max-w-screen-lg">
             <div className="w-1/2 md:w-1/3 p-2">
-              <img
-                src="https://logos-world.net/wp-content/uploads/2020/08/Canon-Logo.png"
-                className="w-full h-40 object-contain border-2 border-black my-1 p-2"
-              />
-
-              // SELL YOUR CAMERA NOW ADD IN ONE BORDER
-              // THEN ADD AS SELECT THE CAMERA BRAND AND BRANDS AT ONE BORDER
-              // AT THE END CONNECT EVERYTHING
-
-            
+              <Link to="/canon/models">
+                <img
+                  src="https://logos-world.net/wp-content/uploads/2020/08/Canon-Logo.png"
+                  className="w-full h-40 object-contain border-2 border-black my-1 p-2"
+                  alt="Canon Logo"
+                />
+              </Link>
             </div>
             <div className="w-1/2 md:w-1/3 p-2">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sony_logo.svg/1280px-Sony_logo.svg.png"
-                className="w-full h-40 object-contain border-2 border-black my-1 p-2"
-              />
+              <Link to="/sony/models">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sony_logo.svg/1280px-Sony_logo.svg.png"
+                  className="w-full h-40 object-contain border-2 border-black my-1 p-2"
+                  alt="Sony Logo"
+                />
+              </Link>
             </div>
             <div className="w-1/2 md:w-1/3 p-2">
-              <img
-                src="https://www.pngmart.com/files/22/Nikon-Logo-PNG.png"
-                className="w-full h-40 object-contain border-2 border-black my-1 p-2"
-              />
+              <Link to="/nikon/models">
+                <img
+                  src="https://www.pngmart.com/files/22/Nikon-Logo-PNG.png"
+                  className="w-full h-40 object-contain border-2 border-black my-1 p-2"
+                  alt="Nikon Logo"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -61,14 +84,11 @@ const BrandSelect = () => {
 const StepsDown = () => {
   return (
     <div className="bg-white border-4 border-blue-900">
-      
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-8 lg:px-12">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">
           <span>Sell your Camera in 3 Steps </span>
         </h1>
       </div>
-
-      // STYLE HERE CHANGE COLOURS AND ADD ICONS ON BUTTONS AND CHANGE BUTTON COLLORS OR ADD ARROW FOR FOLLOW
 
       <div className="flex justify-center">
         <div className="flex flex-wrap max-w-screen-lg">
@@ -93,4 +113,4 @@ const StepsDown = () => {
   );
 };
 
-export default all3;
+export default All3;

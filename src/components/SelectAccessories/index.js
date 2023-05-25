@@ -1,0 +1,30 @@
+import React from "react";
+
+const SelectAccessories = () => {
+  const accessories = [
+    { id: 1, name: "Box", image: "https://cdn-icons-png.flaticon.com/512/4396/4396947.png" },
+    { id: 2, name: "Bill", image: "/bill.jpg" },
+    { id: 3, name: "OG Battery", image: "/battery.jpg" },
+    { id: 4, name: "OG Charger", image: "/charger.jpg" },
+  ];
+
+  return (
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold mb-6">Select Accessories</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {accessories.map((accessory) => (
+          <div key={accessory.id} className="bg-white p-4 shadow-md">
+            <img
+              src={accessory.image}
+              alt={accessory.name}
+              className="w-full h-40 object-cover mb-2"
+            />
+            <span className="text-lg font-medium">{accessory.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SelectAccessories;

@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CanonLens from "../CanonLens";
 import SelectAccessories from "../SelectAccessories";
 import CameraCondition from "../CameraCondition";
-import DetailsCamera from "../DetailsCamera";
+import DetailsCamera from "../DetailsCamera"; 
+import CameraQuestion from "../CameraQuestion"; 
+import FinalSelect from "../FinalSelect"; 
+import AddressDetails from "../AddressDetails";
 
 // FIRST I WILL CREATE ALL THE COMPONENTS AND CHECK HERE THAN PROCEED
 
@@ -45,7 +48,7 @@ const ALL1 = () => {
   return(
     <div>
       <CanonModels />
-      <DetailsCamera /> 
+      <AddressDetails />
       
       
     

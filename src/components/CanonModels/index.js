@@ -48,7 +48,7 @@ const ALL1 = () => {
   return(
     <div>
       <CanonModels />
-      <AddressDetails />
+
       
       
     

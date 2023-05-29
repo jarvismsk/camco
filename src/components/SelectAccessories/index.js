@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const SelectAccessories = () => {
   const accessories = [
     { id: 1, name: "Box", image: "https://cdn-icons-png.flaticon.com/512/4396/4396947.png" },
-    { id: 2, name: "Bill", image: "/bill.jpg" },
-    { id: 3, name: "OG Battery", image: "/battery.jpg" },
-    { id: 4, name: "OG Charger", image: "/charger.jpg" },
+    { id: 2, name: "Bill", image: "/bill.jpg" }
   ];
 
   return (

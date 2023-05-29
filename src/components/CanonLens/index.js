@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import SelectAccessories from "../SelectAccessories";
 
 const lensOptions = [
-  { id: 1, name: "Canon 24-55mm f1.4", image: "/clens.jpg" },
-  { id: 2, name: "Canon 24-55mm f1.4", image: "/model2.jpg" },
-  { id: 3, name: "Canon 24-55mm f1.4", image: "/model3.jpg" },
+  { id: 1, name: "Canon 18-55mm f/3.5 f1.4", image: "/CamsPics/CanonLens/canon18-55.jpeg" },
+  { id: 2, name: "Canon 55-250mm f/4-5.6 f1.4", image: "/CamsPics/CanonLens/canon55-250.jpeg" },
   // Add more lens options without the 'next' property
 ];
 

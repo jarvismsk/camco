@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SelectAccessories = () => {
   const accessories = [
@@ -14,11 +15,13 @@ const SelectAccessories = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {accessories.map((accessory) => (
           <div key={accessory.id} className="bg-white p-4 shadow-md">
-            <img
-              src={accessory.image}
-              alt={accessory.name}
-              className="w-full h-40 object-cover mb-2"
-            />
+            <Link to="/camera-condition">
+              <img
+                src={accessory.image}
+                alt={accessory.name}
+                className="w-full h-40 object-cover mb-2"
+              />
+            </Link>
             <span className="text-lg font-medium">{accessory.name}</span>
           </div>
         ))}

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const CameraCondition = () => {
+const cameraCondition = () => {
   const conditionOptions = [
     { id: 1, name: "Great", description: "Not much used" },
     { id: 2, name: "Good", description: "Slightly used" },
@@ -13,8 +14,10 @@ const CameraCondition = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {conditionOptions.map((condition) => (
           <div key={condition.id} className="bg-white p-4 shadow-md">
-            <span className="text-2xl font-bold mb-2">{condition.name}</span>
-            <p>{condition.description}</p>
+            <Link to="/details-camera">
+              <span className="text-2xl font-bold mb-2">{condition.name}</span>
+              <p>{condition.description}</p>
+            </Link>
           </div>
         ))}
       </div>
@@ -22,4 +25,4 @@ const CameraCondition = () => {
   );
 };
 
-export default CameraCondition;
+export default cameraCondition;

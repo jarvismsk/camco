@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const FinalSelect = () => {
   const [selectedCamera, setSelectedCamera] = useState('Canon 1500D');
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
+  const history = useHistory();
 
   const handlePaymentMethodChange = (method) => {
     setSelectedPaymentMethod(method);
   };
 
   const handleSellNow = () => {
-    // Handle sell now action
+    // Redirect to the address details page
+    history.push('/address-details');
   };
 
   return (

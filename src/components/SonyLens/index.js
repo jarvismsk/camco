@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const sony = () => {
+const nikon = () => {
     return(
         <div>
-            Sony Models
+            Nikon Lens
         </div>
     )
 }
-export default sony;
+
+export default nikon;

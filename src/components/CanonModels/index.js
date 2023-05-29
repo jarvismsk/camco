@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const canonModelsid = [
+const canonModels = [
   { id: 1, name: "Canon 1500D", image: "/cmodel.jpg", next: "/canon/lens" },
   { id: 2, name: "Canon 1500D", image: "/cmodel.jpg", next: "/canon/lens" },
   { id: 3, name: "Canon 1500D", image: "/cmodel.jpg", next: "/canon/lens" },
@@ -13,7 +13,7 @@ const CanonModels = () => {
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold mb-6">Select the Camera Model</h1>
       <div className="grid grid-cols-3 gap-4">
-        {canonModelsid.map((model) => (
+        {canonModels.map((model) => (
           <div key={model.id} className="bg-white p-4 shadow-md">
             <Link to={model.next}>
               <img

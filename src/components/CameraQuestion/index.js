@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const CameraQuestion = () => {
   const [model, setModel] = useState('');
@@ -8,6 +9,8 @@ const CameraQuestion = () => {
     { id: 3, question: 'Does the camera come with its original accessories?', answer: null },
   ]);
   const [price, setPrice] = useState(0);
+
+  const history = useHistory();
 
   const handleAnswerChange = (questionId, answer) => {
     const updatedQuestions = questions.map((q) => (q.id === questionId ? { ...q, answer } : q));
@@ -27,6 +30,7 @@ const CameraQuestion = () => {
 
   const handleContinue = () => {
     // Handle form submission or navigation to the next page
+    history.push('/final-select');
   };
 
   return (
@@ -74,11 +78,7 @@ const CameraQuestion = () => {
       <div className="flex-1 p-8 bg-white">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold">Selected Model: {model}</h2>
-          <img
-            src="/camera-photo.jpg"
-            alt="Camera"
-            className="w-24 h-auto"
-          />
+          <img src="/camera-photo.jpg" alt="Camera" className="w-24 h-auto" />
         </div>
         <hr className="border-gray-300 mb-6" />
         <h3 className="text-lg font-bold mb-4">Selected Answers</h3>

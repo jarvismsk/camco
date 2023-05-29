@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NikonModels = () => {
-  // CanonModels component code
-  return <div>Nikon Models</div>;
-};
+const nikon = () => {
+    return(
+        <div>
+            Nikon Models
+        </div>
+    )
+}
 
-export default NikonModels;
+export default nikon;
